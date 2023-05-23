@@ -6,8 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        name: checkout
       - uses: actions/setup-node@v3
+        name: setup
         with:
           node-version: '14'
       - run: npm install -g bats
+        name: npm install
       - run: bats -v
+        name: bats
