@@ -15,3 +15,4 @@ jobs:
         name: npm install
       - run: bats -v
         name: bats
+      - run: git log
